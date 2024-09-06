@@ -9,12 +9,12 @@ function MySection() {
           <h1 className="text-white text-4xl sm:text-6xl lg:text-6xl  mb-4 font-extrabold"> 
             Hello, I'm Lakshan
           </h1>
-          <p className='text-gray-100 text-base sm:text-lg mb-6 lg:text-xl'>
+          <p className='text-gray-100 text-base sm:text-lg mb-6 lg:text-xl'>yy
             I'm dcide gedbug hbuhde b uedbue c ug uef hdohh eefiueheur urierio ro3
           </p>
           <dev>
-            <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white'>
-                Contact Me
+          <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#a481b6] via-[#8a30b8] to-[#6b03fc] hover:bg-slate-200 text-white'>                
+              Contact Me
             </button>
             <button className='px-6 py-3 w-full sm:w-fit rounded-full bg-transparent hover:bg-slate-800 text-white border border-white mt-3 justify-center'>
                 Downloard CV
