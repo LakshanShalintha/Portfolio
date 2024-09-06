@@ -47,14 +47,14 @@ function MySection() {
             </button>
           </div>
         </div>
-        <div className="col-span-5 place-self-center mt-4 lg:mt-0">
-          <div className="rounded-full bg-[#090909] w-[350px] h-[350px] lg:w-[400px] lg:h-[400px] relative">
+        <div className="col-span-5 place-self-center mt-4 lg:mt-10">
+          <div className="bg-[#161515] w-[350px] h-[350px] lg:w-[350px] lg:h-[400px] relative mt-20 shadow-[0_0_25px_1px_rgba(255,255,255,0.5)]">
             <Image
-              src="/images/Myimages/my-image.png"
+               src="/images/Myimages/my-image.png"
               alt="my image"
-              className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
-              width={300}
-              height={300}
+              className='absolute bottom-0 left-1/2 transform -translate-x-1/2'
+              width={400}
+              height={400}
             />
           </div>
         </div>
