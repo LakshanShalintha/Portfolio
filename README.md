@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Portfolio
 A portfolio showcasing my projects, skills, and experience in software development. This repository includes various completed and ongoing projects, demonstrating my expertise in Flutter, React Native, and other technologies.
 =======
@@ -39,3 +40,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 >>>>>>> 4b19b8b (Initial commit from Create Next App)
+=======
+# Portfolio
+A portfolio showcasing my projects, skills, and experience in software development. This repository includes various completed and ongoing projects, demonstrating my expertise in Flutter, React Native, and other technologies.
+>>>>>>> 493c773d0f05a4163c3065e05d9a63b47bd672a3
