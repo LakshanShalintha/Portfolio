@@ -9,7 +9,7 @@ function MySection() {
     <section>
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-7 place-self-center text-center sm:text-left">
-          <h1 className="text-white text-4xl sm:text-6xl lg:text-6xl mb-4 font-extrabold">
+          <h1 className="text-white text-4xl sm:text-6xl lg:text-6xl mb-4 font-extrabold mt-12">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b171d1] to-[#8437f0]">
               Hello, I'm Lakshan
             </span>
@@ -47,7 +47,7 @@ function MySection() {
             </button>
           </div>
         </div>
-        <div className="col-span-5 place-self-center mt-4 lg:mt-10">
+        <div className="col-span-5 place-self-center mt-2 lg:mt-1">
           <div className="bg-[#161515] w-[350px] h-[350px] lg:w-[350px] lg:h-[400px] relative mt-20 shadow-[0_0_25px_1px_rgba(255,255,255,0.5)]">
             <Image
                src="/images/Myimages/my-image.png"
