@@ -2,7 +2,16 @@ import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-const ProjectCards = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+// Define a TypeScript interface for the props
+interface ProjectCardProps {
+  imgUrl: string;
+  title: string;
+  description: string;
+  gitUrl: string;
+  previewUrl: string;
+}
+
+const ProjectCards: React.FC<ProjectCardProps> = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
     <div className="border-4 border-transparent rounded-xl bg-gradient-to-r from-[#a481b6] via-[#8a30b8] to-[rgb(107,3,252)] p-[2px] hover:border-purple-500 hover:shadow-[0_0_15px_5px_rgba(128,0,128,0.5)] transition-all">
       {/* Create a space between the border and content using padding */}
