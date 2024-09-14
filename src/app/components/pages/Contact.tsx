@@ -1,4 +1,4 @@
-"use client"; // Add this to mark the component as a Client Component
+"use client"; 
 
 import React, { useState, useRef } from 'react';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -144,3 +144,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
