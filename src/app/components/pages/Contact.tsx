@@ -55,9 +55,10 @@ const Contact: React.FC = () => {
             <h2 className="text-2xl font-semibold mb-4">Let's Connect</h2>
             <p className="text-gray-400 mb-6">
               I&rsquo;m currently looking for new opportunities, my inbox is always
-              open. Whether you have a question or just want to say hi, I'll try
+              open. Whether you have a question or just want to say hi, I&apos;ll try
               my best to get back to you!
             </p>
+
             <div className="flex space-x-4">
               <a
                 href="https://github.com/LakshanShalintha"
@@ -143,3 +144,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
