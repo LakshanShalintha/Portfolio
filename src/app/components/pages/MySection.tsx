@@ -27,7 +27,7 @@ function MySection() {
         >
           <h1 className="text-white text-4xl sm:text-6xl lg:text-6xl mb-4 font-extrabold mt-8">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b171d1] to-[#8437f0]">
-              Hello, I'm Lakshan
+              Hello, I&rsquo;m Lakshan
             </span>
           </h1>
           <div className="text-white text-3xl sm:text-4xl lg:text-4xl">
@@ -50,7 +50,7 @@ function MySection() {
           </div>
 
           <p className="text-gray-200 text-base sm:text-lg mb-6 lg:text-xl mt-12">
-            I'm a Software Engineer with expertise in mobile and web development, passionate about building user-friendly and efficient digital solutions. Welcome to my portfolio, where innovation meets technology.
+            I&rsquo;m a Software Engineer with expertise in mobile and web development, passionate about building user-friendly and efficient digital solutions. Welcome to my portfolio, where innovation meets technology.
           </p>
           <div>
             <Link href="#contact"> {/* Wrap the button with Link */}
