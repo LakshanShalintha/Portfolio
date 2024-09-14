@@ -89,6 +89,7 @@ const About = () => {
             high-quality, efficient results that meet both user and business
             needs.
           </p>
+
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
