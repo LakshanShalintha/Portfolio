@@ -84,12 +84,16 @@ const About = () => {
             back-end technologies, allowing me to create well-rounded digital
             solutions. I thrive on solving complex problems and continuously
             learning new tools and techniques to stay at the forefront of
+            technology. Whether it's building user-friendly interfaces or
+            optimizing system performance, I’m committed to delivering
+            high-quality, efficient results that meet both user and business
+            needs.
+          </p>
             technology. Whether it&rsquo;s building user-friendly interfaces or
             optimizing system performance, I&rsquo;m committed to delivering
             high-quality, efficient results that meet both user and business
             needs.
           </p>
-
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
