@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
       <div className="bg-gradient-to-r from-[rgb(107,3,252)] via-[#8a30b8] to-[#a481b6] p-[6px] rounded-md mt-4">
         <div className="flex flex-col md:flex-row justify-between items-start bg-black text-white p-8 rounded-md">
           <div className="flex-1 mb-8 md:mb-0 md:pr-8">
-            <h2 className="text-2xl font-semibold mb-4">Let's Connect</h2>
+            <h2 className="text-2xl font-semibold mb-4">Let&rsquo;s Connect</h2>
             <p className="text-gray-400 mb-6">
               I&rsquo;m currently looking for new opportunities, my inbox is always
               open. Whether you have a question or just want to say hi, I&apos;ll try
@@ -144,4 +144,3 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
-
