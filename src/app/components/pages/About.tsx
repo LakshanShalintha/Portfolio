@@ -1,121 +1,141 @@
 "use client";
-import React, { useTransition, useState } from "react";
-import Image from "next/image";
-import TabButton from "../common/TabButton";
+import React, { useState, useRef } from "react";
+import ProjectCards from "../common/ProjectCards";
+import ProjectTags from "../common/ProjectTags";
+import { motion, useInView } from "framer-motion";
 
-const TAB_DATA = [
+const projectsData = [
   {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-1 pl-2">
-        <ul className="list-disc pl- space-y-2">
-          <li>Dart</li>
-          <li>PHP</li>
-          <li>Python</li>
-          <li>Java</li>
-        </ul>
-        <ul className="list-disc pl- space-y-2">
-          <li>React</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>CSS</li>
-        </ul>
-        <ul className="list-disc pl- space-y-2">
-          <li>C</li>
-          <li>HTML</li>
-          <li>MySQL</li>
-          <li>MongoDB</li>
-        </ul>
-      </div>
-    ),
+    id: 1,
+    title: "Real-Time Audiobook Website",
+    description: "Project 1 description",
+    image: "/images/Projects/Logo.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/LakshanShalintha/AudioBook",
+    previewUrl: "/",
   },
   {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
-      </ul>
-    ),
+    id: 4,
+    title: "Real-Time Audiobook App",
+    description: "Project 2 description",
+    image: "/images/Projects/Logo.png",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/LakshanShalintha/Mini-Project",
+    previewUrl: "/",
   },
   {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
-      </ul>
-    ),
+    id: 2,
+    title: "Travel-Website",
+    description: "Project 3 description",
+    image: "/images/Projects/Logo.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/LakshanShalintha/PHP-Web-Project",
+    previewUrl: "/",
+  },
+  {
+    id: 3,
+    title: "Sith Arana Psychological Counselling System",
+    description: "Project 4 description",
+    image: "/images/Projects/Logo.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/LakshanShalintha/SUSL-Faculty-Of-Social-Sciences-Sith-Arana-Psychological-Counseling-System--2024",
+    previewUrl: "/",
+  },
+  {
+    id: 5,
+    title: "Official Website of the Society of Computer Sciences-SUSL ",
+    description: "Authentication and CRUD operations",
+    image: "/images/Projects/Logo.png",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  {
+    id: 6,
+    title: "Rajarata Pawning Centre ",
+    description: "Project 6 description",
+    image: "/images/Projects/Logo.png",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  {
+    id: 7,
+    title: "Travel-Web ",
+    description: "Project 7 description",
+    image: "/images/Projects/Logo.png",
+    tag: ["All", "Web"],
+    gitUrl: "/https://github.com/LakshanShalintha/Travel-web",
+    previewUrl: "/https://travellsp.vercel.app/",
   },
 ];
 
-const About = () => {
-  const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
+const Projects = () => {
+  const [tag, setTag] = useState("All");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
-  const handleTabChange = (id: string) => {
-    startTransition(() => {
-      setTab(id);
-    });
+  const handleTagChange = (newTag: React.SetStateAction<string>) => {
+    setTag(newTag);
   };
 
-  // Find the currently selected tab's content
-  const selectedTab = TAB_DATA.find((t) => t.id === tab);
+  const filteredProjects = projectsData.filter((project) =>
+    project.tag.includes(tag)
+  );
+
 
   return (
-    <section className="mt-5 text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image 
-            src="/images/Myimages/my-image.png"
-            alt="my image"
-            width={400}
-            height={400}
+    <section id="projects">
+      <h2 className="text-center text-4xl font-bold text-white mt-20 mb-8 md:mb-12">
+        My Projects
+      </h2>
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-4">
+        <ProjectTags
+          onClick={handleTagChange}
+          name="All"
+          isSelected={tag === "All"}
         />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="mt-16 text-4xl font-bold text-white mb-4">
-            About Me
-          </h2>
-          <p className="text-base lg:text-lg">
-            I’m a passionate Software Engineer with a strong background in both
-            mobile and web development. My expertise spans across front-end and
-            back-end technologies, allowing me to create well-rounded digital
-            solutions. I thrive on solving complex problems and continuously
-            learning new tools and techniques to stay at the forefront of
-            technology. Whether it's building user-friendly interfaces or
-            optimizing system performance, I’m committed to delivering
-            high-quality, efficient results that meet both user and business
-            needs.
-          </p>
-          <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              Skills
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              Education
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              Certifications
-            </TabButton>
-          </div>
-          <div className="mt-8">
-            {selectedTab ? selectedTab.content : <p>No content available</p>}
-          </div>
-        </div>
+        <ProjectTags
+          onClick={handleTagChange}
+          name="Web"
+          isSelected={tag === "Web"}
+        />
+        <ProjectTags
+          onClick={handleTagChange}
+          name="Mobile"
+          isSelected={tag === "Mobile"}
+        />
       </div>
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {filteredProjects.map((project, index) => (
+          <motion.li
+          key={index}
+          variants={{
+            initial: { opacity: 0, rotate: 180, y: 30 }, // Starts with a rotation, a slight bounce, and invisible
+            animate: { opacity: 1, rotate: 0, y: 0 }    // Rotates back to normal position, bounces up to its position, and becomes visible
+          }}
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          transition={{ 
+            duration: 0.7, // Duration for the rotation and bounce effect
+            delay: index * 0.3, // Staggered delay based on index
+            ease: "anticipate" // Easing with a slight bounce
+          }}
+        >
+          <ProjectCards
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            imgUrl={project.image}
+            gitUrl={project.gitUrl}
+            previewUrl={project.previewUrl}
+          />
+        </motion.li>
+        
+        ))}
+      </ul>
     </section>
   );
 };
 
-export default About;
+export default Projects;
