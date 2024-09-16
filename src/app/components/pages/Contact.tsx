@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
         }
         setTimeout(() => {
           setStatus(null);
-        }, 7000);
+        }, 5000);
       } else {
         setStatus("Submission failed. Please try again.");
       }
@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
   return (
     <div id="contact">
       <div className="text-center py-10 mt-20">
-        <h1 className="text-4xl font-bold text-white">Contact Me</h1>
+        <h1 className="text-4xl font-bold text-white mt-12">Contact Me</h1>
       </div>
 
       <div className="bg-gradient-to-r from-[rgb(107,3,252)] via-[#8a30b8] to-[#a481b6] p-[6px] rounded-md mt-4">

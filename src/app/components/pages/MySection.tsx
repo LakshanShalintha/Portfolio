@@ -9,7 +9,7 @@ import Link from 'next/link';
 function MySection() {
   return (
     <section>
-      <div className="absolute top-8 left-20 p-4">
+      <div className="absolute top-4 right-2 p-4">
         <Image
           src="/images/Myimages/Logo.png" 
           alt="LSP Logo"
