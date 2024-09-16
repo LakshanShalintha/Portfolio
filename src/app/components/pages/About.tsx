@@ -66,7 +66,10 @@ const About = () => {
   const selectedTab = TAB_DATA.find((t) => t.id === tab);
 
   return (
-    <section className="mt-5 text-white" id="about">
+    <div id="about">
+      <div className="text-center py-10 mt-24">
+        <h1 className="text-4xl font-bold text-white mt-12">About Me</h1>
+      </div>
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image 
             src="/images/Myimages/my-image.png"
@@ -74,21 +77,19 @@ const About = () => {
             width={400}
             height={400}
         />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="mt-16 text-4xl font-bold text-white mb-4">
-            About Me
-          </h2>
+        <div className="mt-2 md:mt-2 text-left flex flex-col h-full">
           <p className="text-base lg:text-lg">
             I&rsquo;m a passionate Software Engineer with a strong background in both
             mobile and web development. My expertise spans across front-end and
             back-end technologies, allowing me to create well-rounded digital
             solutions. I thrive on solving complex problems and continuously
             learning new tools and techniques to stay at the forefront of
-            technology. Whether it's building user-friendly interfaces or
-            optimizing system performance, I’m committed to delivering
+            technology. Whether it&rsquo;s building user-friendly interfaces or
+            optimizing system performance, I&rsquo;m committed to delivering
             high-quality, efficient results that meet both user and business
             needs.
           </p>
+
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
@@ -114,7 +115,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

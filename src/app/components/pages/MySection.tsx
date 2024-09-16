@@ -9,7 +9,7 @@ import Link from 'next/link';
 function MySection() {
   return (
     <section>
-      <div className="absolute top-8 left-20 p-4">
+      <div className="absolute top-4 right-2 p-4">
         <Image
           src="/images/Myimages/Logo.png" 
           alt="LSP Logo"
@@ -60,7 +60,7 @@ function MySection() {
             </Link>
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#a481b6] via-[#8a30b8] to-[#6b03fc] hover:bg-slate-800 text-white mt-3 justify-center">
               <a 
-                href="/CV/cv.pdf" // Path to your CV file
+                href="/CV/CV.pdf" // Path to your CV file
                 download="Lakshan Shalintha.pdf" // Force the browser to download the file
               >
                 <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
