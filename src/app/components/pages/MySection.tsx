@@ -1,14 +1,19 @@
-"use client"; // Add this line at the top
+"use client";
+import React from "react";
+import Image from "next/image";
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import ParticlesComponent from "../common/ParticlesComponent";
+import StarBackground from "../common/StarBackground";
 
-import React from 'react';
-import Image from 'next/image';
-import { TypeAnimation } from 'react-type-animation';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
 
 function MySection() {
   return (
     <section>
+      <ParticlesComponent id="tsparticles" /> 
+      {/* <StarBackground />  */}
+
       <div className="absolute top-4 right-2 p-4">
         <Image
           src="/images/Myimages/Logo.png" 
@@ -53,26 +58,26 @@ function MySection() {
             I&rsquo;m a Software Engineer with expertise in mobile and web development, passionate about building user-friendly and efficient digital solutions. Welcome to my portfolio, where innovation meets technology.
           </p>
           <div>
-            <Link href="#contact"> {/* Wrap the button with Link */}
+            <Link href="#contact"> 
               <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#a481b6] via-[#8a30b8] to-[rgb(107,3,252)] hover:bg-slate-200 text-white">
                 Contact Me
               </button>
             </Link>
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#a481b6] via-[#8a30b8] to-[#6b03fc] hover:bg-slate-800 text-white mt-3 justify-center">
               <a 
-                href="/CV/CV.pdf" // Path to your CV file
-                download="Lakshan Shalintha.pdf" // Force the browser to download the file
+                href="/CV/CV.pdf" 
+                download="Lakshan Shalintha.pdf" 
               >
                 <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
                   Download CV
                 </span>
-              </a> {/* Close the <a> tag here */}
+              </a> 
             </button>
           </div>
         </motion.div> 
         <motion.div
-          initial={{ scale: 1.2, opacity: 0 }} // Starts slightly zoomed in and invisible
-          animate={{ scale: 1, opacity: 1 }} // Zooms out to the normal size while fading in
+          initial={{ scale: 1.2, opacity: 0 }} 
+          animate={{ scale: 1, opacity: 1 }} 
           transition={{ duration: 0.6, ease: "easeInOut" }} 
           className="col-span-5 place-self-center mt-2 lg:mt-1"
         >
