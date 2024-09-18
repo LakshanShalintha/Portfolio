@@ -28,8 +28,7 @@
     "resend": "^4.0.0",
     "tailwind-merge": "^2.5.2",
     "three": "^0.168.0",
-    "tsparticles": "^3.5.0",
-    "tsparticles-engine": "^2.12.0"
+    "tsparticles": "^3.5.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
