@@ -1,89 +1,78 @@
 "use client";
-
-import { useCallback } from "react";
+import { Engine } from "@tsparticles/engine";
 import Particles from "@tsparticles/react";
-import { ISourceOptions } from "tsparticles-engine";
+import { useMemo } from "react";
+import { loadFull } from "tsparticles"; // Use loadFull instead if loadSlim is not available
 
-interface ParticlesComponentProps {
-  id: string;
-}
+const ParticlesComponent = (props: { id: string | undefined; }) => {
 
-const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
-  // UseCallback to initialize the particles engine
-  const particlesInit = useCallback(async () => {
-    // Load the slim version of tsParticles to reduce the bundle size
-    return
-  }, []);
-
-  // Particle options typed explicitly with ISourceOptions for safety
-  const particlesOptions: ISourceOptions = {
-    fpsLimit: 120,
-    interactivity: {
-      events: {
-        onClick: {
+  const options = useMemo(
+    () => ({
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: "repulse",
+          },
+          onHover: {
+            enable: true,
+            mode: 'grab',
+          },
+        },
+        modes: {
+          push: {
+            distance: 200,
+            duration: 15,
+          },
+          grab: {
+            distance: 150,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: "#FFFFFF",
+        },
+        links: {
+          color: "#FFFFFF",
+          distance: 150,
           enable: true,
-          mode: "push", // Use predefined mode string literal
+          opacity: 0.3,
+          width: 1,
         },
-        onHover: {
+        move: {
+          direction: "none",
           enable: true,
-          mode: "grab", // Use predefined mode string literal
+          outModes: {
+            default: "bounce",
+          },
+          random: true,
+          speed: 1,
+          straight: false,
         },
-        resize: true, // Ensure particles resize on window resize
-      },
-      modes: {
-        push: {
-          quantity: 4, // Pushes 4 particles on click
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 150,
         },
-        grab: {
-          distance: 200, // Grab distance for hover
+        opacity: {
+          value: 1.0,
         },
-      },
-    },
-    particles: {
-      color: {
-        value: "#ffffff", // Set color to white
-      },
-      links: {
-        color: "#ffffff", // White links
-        distance: 150,
-        enable: true,
-        opacity: 0.5,
-        width: 1,
-      },
-      move: {
-        direction: "none", // Correct typing here
-        enable: true,
-        outModes: {
-          default: "bounce", // Particles bounce on borders
+        shape: {
+          type: "circle",
         },
-        random: false,
-        speed: 1,
-        straight: false,
-      },
-      number: {
-        value: 80,
-        density: {
-          enable: true,
-          area: 800, // Particle density
+        size: {
+          value: { min: 1, max: 3 },
         },
       },
-      opacity: {
-        value: 0.5,
-        random: false,
-      },
-      shape: {
-        type: "circle", // Circle particles
-      },
-      size: {
-        value: { min: 1, max: 5 }, // Random size between 1 and 5
-      },
-    },
-    detectRetina: true, // Enable retina detection for high-resolution devices
-  };
-
-  return (
-    <Particles id={id} init={particlesInit} options={particlesOptions} />
+      detectRetina: true,
+    }),
+    [],
   );
+
+  return <Particles id={props.id} options={options} init={async (engine: Engine) => await loadFull(engine)} />;
 };
 
 export default ParticlesComponent;
