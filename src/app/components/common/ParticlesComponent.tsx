@@ -1,14 +1,13 @@
 "use client";
+import { Engine } from "@tsparticles/engine";
 import Particles from "@tsparticles/react";
 import { useMemo } from "react";
-
+import { loadFull } from "tsparticles"; // Use loadFull instead if loadSlim is not available
 
 const ParticlesComponent = (props: { id: string | undefined; }) => {
 
-
   const options = useMemo(
     () => ({
-      
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -73,8 +72,7 @@ const ParticlesComponent = (props: { id: string | undefined; }) => {
     [],
   );
 
-
-  return <Particles id={props.id}  options={options} />; 
+  return <Particles id={props.id} options={options} init={async (engine: Engine) => await loadFull(engine)} />;
 };
 
 export default ParticlesComponent;
