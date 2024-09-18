@@ -1,27 +1,16 @@
 "use client";
-import { useCallback, useEffect, useMemo, useState } from "react";
 import Particles from "@tsparticles/react";
-import { Engine } from "tsparticles-engine";
-import { loadSlim } from "@tsparticles/slim"; // Using slim version for smaller bundle size
+import { useMemo } from "react";
+import { loadSlim } from "@tsparticles/slim";
+import type { Engine } from "tsparticles-engine";
 
-interface ParticlesComponentProps {
-  id: string;
-}
-
-const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
-  const [init, setInit] = useState(false);
-
-  // Load particles slim engine only once
-  const particlesInit = useCallback(async (engine: Engine) => {
+const ParticlesComponent = (props: { id: string | undefined }) => {
+  // Initialize particles engine using loadSlim
+  const particlesInit = async (engine: Engine) => {
     await loadSlim(engine);
-    setInit(true); // Set state to indicate that initialization is complete
-  }, []);
+  };
 
-  const particlesLoaded = useCallback((container: any) => {
-    console.log("Particles loaded", container);
-  }, []);
-
-  // Memoize particle options for performance optimization
+  // Memoized options for particle effects
   const options = useMemo(
     () => ({
       fpsLimit: 120,
@@ -29,29 +18,29 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
         events: {
           onClick: {
             enable: true,
-            mode: "repulse", // Repulse on click
+            mode: "repulse",
           },
           onHover: {
             enable: true,
-            mode: "grab", // Grab on hover
+            mode: "grab",
           },
         },
         modes: {
-          repulse: {
-            distance: 200, // Set repulse distance
-            duration: 0.4,
+          push: {
+            distance: 200,
+            duration: 15,
           },
           grab: {
-            distance: 150, // Set grab distance
+            distance: 150,
           },
         },
       },
       particles: {
         color: {
-          value: "#FFFFFF", // White particles
+          value: "#FFFFFF",
         },
         links: {
-          color: "#FFFFFF", // White links
+          color: "#FFFFFF",
           distance: 150,
           enable: true,
           opacity: 0.3,
@@ -61,37 +50,35 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = ({ id }) => {
           direction: "none",
           enable: true,
           outModes: {
-            default: "bounce", // Bounce on borders
+            default: "bounce",
           },
-          random: false,
+          random: true,
           speed: 1,
           straight: false,
         },
         number: {
           density: {
             enable: true,
-            area: 800, // Particle density control
           },
-          value: 150, // Total number of particles
+          value: 150,
         },
         opacity: {
           value: 1.0,
         },
         shape: {
-          type: "circle", // Circle shaped particles
+          type: "circle",
         },
         size: {
-          value: { min: 1, max: 3 }, // Particle size range
+          value: { min: 1, max: 3 },
         },
       },
-      detectRetina: true, // Enable retina detection
+      detectRetina: true,
     }),
     []
   );
 
-  return (
-    <Particles id={id} init={particlesInit} options={options} />
-  );
+  // Rendering the Particles component with the specified options
+  return <Particles id={props.id} init={particlesInit} options={options} />;
 };
 
 export default ParticlesComponent;
