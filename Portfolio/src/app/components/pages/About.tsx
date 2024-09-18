@@ -2,11 +2,29 @@
 import React, { useTransition, useState } from "react";
 import TabButton from "../common/TabButton";
 import SkillDataProvider from "../common/SkillDataProvider";
-import { Backend_skill, Frontend_skill, Frontend_skill_1, Other_skill, Other_skill_1,} from "../common/constants";
+import {
+  Backend_skill,
+  Frontend_skill,
+  Frontend_skill_1,
+  Other_skill,
+  Other_skill_1,
+} from "../common/constants";
 
+// Define the type for your image objects
+interface SkillImage {
+  Image: string; // Image could be a URL or path, adjust accordingly
+  width: number;
+  height: number;
+}
 
+// Define TAB_DATA type
+interface TabData {
+  title: string;
+  id: string;
+  content: React.ReactNode;
+}
 
-const TAB_DATA = [
+const TAB_DATA: TabData[] = [
   {
     title: "Skills",
     id: "skills",
@@ -38,7 +56,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Sabaragamuwa University of Sri Lakna </li>
+        <li>Sabaragamuwa University of Sri Lanka</li>
       </ul>
     ),
   },
@@ -48,10 +66,10 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Teamwork</li>
-        <li> Leadership</li>
-        <li> Critical Thinking</li>
-        <li> Time Management</li>
-        <li> Communication Skills</li>
+        <li>Leadership</li>
+        <li>Critical Thinking</li>
+        <li>Time Management</li>
+        <li>Communication Skills</li>
       </ul>
     ),
   },
@@ -67,7 +85,6 @@ const About = () => {
     });
   };
 
- 
   const selectedTab = TAB_DATA.find((t) => t.id === tab);
 
   return (
@@ -78,7 +95,7 @@ const About = () => {
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-            {Frontend_skill.map((image: { Image: any; width: any; height: any; }, index: any) => (
+            {Frontend_skill.map((image: SkillImage, index: number) => (
               <SkillDataProvider
                 key={index}
                 src={image.Image}
@@ -89,7 +106,7 @@ const About = () => {
             ))}
           </div>
           <div className="flex flex-row justify-around flex-wrap mt-6 gap-5 items-center">
-            {Frontend_skill_1.map((image: { Image: any; width: any; height: any; }, index: any) => (
+            {Frontend_skill_1.map((image: SkillImage, index: number) => (
               <SkillDataProvider
                 key={index}
                 src={image.Image}
@@ -100,7 +117,7 @@ const About = () => {
             ))}
           </div>
           <div className="flex flex-row justify-around flex-wrap mt-6 gap-5 items-center">
-            {Backend_skill.map((image: { Image: any; width: any; height: any; }, index: any) => (
+            {Backend_skill.map((image: SkillImage, index: number) => (
               <SkillDataProvider
                 key={index}
                 src={image.Image}
@@ -111,7 +128,7 @@ const About = () => {
             ))}
           </div>
           <div className="flex flex-row justify-around flex-wrap mt-7 gap-5 items-center">
-            {Other_skill.map((image: { Image: any; width: any; height: any; }, index: any) => (
+            {Other_skill.map((image: SkillImage, index: number) => (
               <SkillDataProvider
                 key={index}
                 src={image.Image}
@@ -122,7 +139,7 @@ const About = () => {
             ))}
           </div>
           <div className="flex flex-row justify-around flex-wrap mt-7 gap-5 items-center">
-            {Other_skill_1.map((image: { Image: any; width: any; height: any; }, index: any) => (
+            {Other_skill_1.map((image: SkillImage, index: number) => (
               <SkillDataProvider
                 key={index}
                 src={image.Image}
