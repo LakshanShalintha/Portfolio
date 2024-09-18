@@ -12,7 +12,7 @@ const projectsData = [
     image: "/images/Projects/Logo.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/LakshanShalintha/AudioBook",
-    previewUrl: "/",
+    previewUrl: "https://audirab.vercel.app/",
   },
   {
     id: 4,
@@ -83,58 +83,64 @@ const Projects = () => {
     project.tag.includes(tag)
   );
 
-
   return (
-    <div id="projects">
-      <div className="text-center py-10 mt-20">
-        <h1 className="text-4xl font-bold text-white mt-12">Projects</h1>
-      </div>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-4">
-        <ProjectTags
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTags
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTags
-          onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
-        />
-      </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
-          <motion.li
-          key={index}
-          variants={{
-            initial: { opacity: 0, rotate: 180, y: 30 }, // Starts with a rotation, a slight bounce, and invisible
-            animate: { opacity: 1, rotate: 0, y: 0 }    // Rotates back to normal position, bounces up to its position, and becomes visible
-          }}
-          initial="initial"
-          animate={isInView ? "animate" : "initial"}
-          transition={{ 
-            duration: 0.7, // Duration for the rotation and bounce effect
-            delay: index * 0.3, // Staggered delay based on index
-            ease: "anticipate" // Easing with a slight bounce
-          }}
-        >
-          <ProjectCards
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.image}
-            gitUrl={project.gitUrl}
-            previewUrl={project.previewUrl}
+    <motion.div
+      initial={{ opacity: 0, scale: 1 }}
+      animate={{ opacity: 1, scale: 1.1 }}
+      transition={{ duration: 0.5 }}
+      className="col-span-7 place-self-center text-center sm:text-left"
+    >
+      <div id="projects">
+        <div className="text-center py-10 mt-20">
+          <h1 className="text-4xl font-bold text-white mt-12">Projects</h1>
+        </div>
+        <div className="text-white flex flex-row justify-center items-center gap-2 py-4">
+          <ProjectTags
+            onClick={handleTagChange}
+            name="All"
+            isSelected={tag === "All"}
           />
-        </motion.li>
-        
-        ))}
-      </ul>
-    </div>
+          <ProjectTags
+            onClick={handleTagChange}
+            name="Web"
+            isSelected={tag === "Web"}
+          />
+          <ProjectTags
+            onClick={handleTagChange}
+            name="Mobile"
+            isSelected={tag === "Mobile"}
+          />
+        </div>
+        <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+          {filteredProjects.map((project, index) => (
+            <motion.li
+            key={index}
+            variants={{
+              initial: { opacity: 0, scale: 0.8 }, 
+              animate: { opacity: 1, scale: 1 }   
+            }}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ 
+              duration: 0.7, 
+              delay: index * 0.3,  
+              ease: "easeOut"
+            }}
+          >
+            <ProjectCards
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              gitUrl={project.gitUrl}
+              previewUrl={project.previewUrl}
+            />
+          </motion.li>
+          
+          ))}
+        </ul>
+      </div>
+    </motion.div>
   );
 };
 
