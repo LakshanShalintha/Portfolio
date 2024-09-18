@@ -1,18 +1,14 @@
 "use client";
 import Particles from "@tsparticles/react";
 import { useMemo } from "react";
-import { loadSlim } from "@tsparticles/slim";
-import type { Engine } from "tsparticles-engine";
 
-const ParticlesComponent = (props: { id: string | undefined }) => {
-  // Initialize particles engine using loadSlim
-  const particlesInit = async (engine: Engine) => {
-    await loadSlim(engine);
-  };
 
-  // Memoized options for particle effects
+const ParticlesComponent = (props: { id: string | undefined; }) => {
+
+
   const options = useMemo(
     () => ({
+      
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -22,7 +18,7 @@ const ParticlesComponent = (props: { id: string | undefined }) => {
           },
           onHover: {
             enable: true,
-            mode: "grab",
+            mode: 'grab',
           },
         },
         modes: {
@@ -74,11 +70,11 @@ const ParticlesComponent = (props: { id: string | undefined }) => {
       },
       detectRetina: true,
     }),
-    []
+    [],
   );
 
-  // Rendering the Particles component with the specified options
-  return <Particles id={props.id} init={particlesInit} options={options} />;
+
+  return <Particles id={props.id}  options={options} />; 
 };
 
 export default ParticlesComponent;
