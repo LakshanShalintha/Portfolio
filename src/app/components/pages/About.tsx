@@ -1,7 +1,10 @@
 "use client";
 import React, { useTransition, useState } from "react";
-import Image from "next/image";
 import TabButton from "../common/TabButton";
+import SkillDataProvider from "../common/SkillDataProvider";
+import { Backend_skill, Frontend_skill, Frontend_skill_1, Other_skill, Other_skill_1,} from "../common/constants";
+
+
 
 const TAB_DATA = [
   {
@@ -16,14 +19,14 @@ const TAB_DATA = [
           <li>Java</li>
         </ul>
         <ul className="list-disc pl- space-y-2">
+          <li>C</li>
           <li>React</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
+          <li>HTML</li>
           <li>CSS</li>
         </ul>
         <ul className="list-disc pl- space-y-2">
-          <li>C</li>
-          <li>HTML</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
           <li>MySQL</li>
           <li>MongoDB</li>
         </ul>
@@ -35,18 +38,20 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>Sabaragamuwa University of Sri Lakna </li>
       </ul>
     ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Others",
+    id: "others",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Teamwork</li>
+        <li> Leadership</li>
+        <li> Critical Thinking</li>
+        <li> Time Management</li>
+        <li> Communication Skills</li>
       </ul>
     ),
   },
@@ -62,7 +67,7 @@ const About = () => {
     });
   };
 
-  // Find the currently selected tab's content
+ 
   const selectedTab = TAB_DATA.find((t) => t.id === tab);
 
   return (
@@ -71,12 +76,63 @@ const About = () => {
         <h1 className="text-4xl font-bold text-white mt-12">About Me</h1>
       </div>
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image 
-            src="/images/Myimages/my-image.png"
-            alt="my image"
-            width={400}
-            height={400}
-        />
+        <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+            {Frontend_skill.map((image: { Image: any; width: any; height: any; }, index: any) => (
+              <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+              />
+            ))}
+          </div>
+          <div className="flex flex-row justify-around flex-wrap mt-6 gap-5 items-center">
+            {Frontend_skill_1.map((image: { Image: any; width: any; height: any; }, index: any) => (
+              <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+              />
+            ))}
+          </div>
+          <div className="flex flex-row justify-around flex-wrap mt-6 gap-5 items-center">
+            {Backend_skill.map((image: { Image: any; width: any; height: any; }, index: any) => (
+              <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+              />
+            ))}
+          </div>
+          <div className="flex flex-row justify-around flex-wrap mt-7 gap-5 items-center">
+            {Other_skill.map((image: { Image: any; width: any; height: any; }, index: any) => (
+              <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+              />
+            ))}
+          </div>
+          <div className="flex flex-row justify-around flex-wrap mt-7 gap-5 items-center">
+            {Other_skill_1.map((image: { Image: any; width: any; height: any; }, index: any) => (
+              <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
         <div className="mt-2 md:mt-2 text-left flex flex-col h-full">
           <p className="text-base lg:text-lg">
             I&rsquo;m a passionate Software Engineer with a strong background in both
@@ -104,10 +160,10 @@ const About = () => {
               Education
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("others")}
+              active={tab === "others"}
             >
-              Certifications
+              Others
             </TabButton>
           </div>
           <div className="mt-8">
