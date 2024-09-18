@@ -5,14 +5,14 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import ParticlesComponent from "../common/ParticlesComponent";
-import StarBackground from "../common/StarBackground";
+
 
 
 function MySection() {
   return (
     <section>
       <ParticlesComponent id="tsparticles" /> 
-      {/* <StarBackground />  */}
+      
 
       <div className="absolute top-4 right-2 p-4">
         <Image
