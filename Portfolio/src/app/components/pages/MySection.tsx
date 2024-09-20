@@ -8,9 +8,7 @@ import Link from "next/link";
 
 function MySection() {
   return (
-    <section>
-      
-      
+    <section>      
 
       <div className="absolute top-4 right-2 p-4">
         <Image
@@ -63,7 +61,7 @@ function MySection() {
             </Link>
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#a481b6] via-[#8a30b8] to-[#6b03fc] hover:bg-slate-800 text-white mt-3 justify-center">
               <a 
-                href="/CV/CV.pdf" 
+                href="/CV/Lakshan Shalintha.pdf" 
                 download="Lakshan Shalintha.pdf" 
               >
                 <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
