@@ -4,13 +4,12 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import ParticlesComponent from "../common/ParticlesComponent";
 
 
 function MySection() {
   return (
     <section>
-      <ParticlesComponent id="tsparticles" /> 
+      
       
 
       <div className="absolute top-4 right-2 p-4">
