@@ -1,11 +1,8 @@
-module.exports = {
-    content: [
-      "./src/**/*.{js,jsx,ts,tsx}", // Adjust this path based on your project's structure
-      "./public/index.html", // Include your HTML files as needed
-    ],
-    theme: {
-      extend: {},
-    },
-    plugins: [],
-  };
-  
+/** @type {import('tailwindcss').Config} */
+export const content = [
+  "./src/**/*.{js,ts,jsx,tsx}",
+];
+export const theme = {
+  extend: {},
+};
+export const plugins = [];
