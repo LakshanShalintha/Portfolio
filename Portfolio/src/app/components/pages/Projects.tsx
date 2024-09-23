@@ -66,7 +66,7 @@ const projectsData = [
     image: "/images/Projects/Logo.png",
     tag: ["All", "Web"],
     gitUrl: "/https://github.com/LakshanShalintha/Travel-web",
-    previewUrl: "/https://travellsp.vercel.app/",
+    previewUrl: "https://travellsp.vercel.app/",
   },
 ];
 
