@@ -2,37 +2,37 @@
   export const Frontend_skill = [
     {
       skill_name: "Html 5",
-      Image: "/Images/Technology/html.jpeg",
+      Image: "/images/Technology/html.jpeg",
       width: 65,
       height: 65,
     },
     {
       skill_name: "Java Script",
-      Image: "/Images/Technology/js.png",
+      Image: "/images/Technology/js.png",
       width: 65,
       height: 65,
     },
     {
       skill_name: "Tailwind Css",
-      Image: "/Images/Technology/tailwind.png",
+      Image: "/images/Technology/tailwind.png",
       width: 65,
       height: 65,
     },
     {
         skill_name: "Java",
-        Image: "/Images/Technology/java.png",
+        Image: "/images/Technology/java.png",
         width: 65,
         height: 65,
       },
     {
       skill_name: "React",
-      Image: "/Images/Technology/react.png",
+      Image: "/images/Technology/react.png",
       width: 65,
       height: 65,
     },
     {
       skill_name: "Type Script",
-      Image: "/Images/Technology/ts.png",
+      Image: "/images/Technology/ts.png",
       width: 65,
       height: 65,
     },
@@ -41,31 +41,31 @@
   export const Frontend_skill_1 = [
     {
       skill_name: "Laravel",
-      Image: "/Images/Technology/laravel.png",
+      Image: "/images/Technology/laravel.png",
       width: 55,
       height: 55,
     },
     {
         skill_name: "Python",
-        Image: "/Images/Technology/python.jpeg",
+        Image: "/images/Technology/python.jpeg",
         width: 55,
         height: 55,
       },
       {
         skill_name: "C",
-        Image: "/Images/Technology/c.png",
+        Image: "/images/Technology/c.png",
         width: 55,
         height: 55,
       },
     {
         skill_name: "Dart",
-        Image: "/Images/Technology/dart.png",
+        Image: "/images/Technology/dart.png",
         width: 55,
         height: 120,
       },
     {
       skill_name: "Next js",
-      Image: "/Images/Technology/next.png",
+      Image: "/images/Technology/next.png",
       width: 55,
       height: 55,
     },
@@ -74,25 +74,25 @@
   export const Backend_skill = [
     {
       skill_name: "Node js",
-      Image: "/Images/Technology/node-js.png",
+      Image: "/images/Technology/node-js.png",
       width: 50,
       height: 50,
     },
     {
       skill_name: "Mongo db",
-      Image: "/Images/Technology/mongodb.png",
+      Image: "/images/Technology/mongodb.png",
       width: 30,
       height: 30,
     },
     {
       skill_name: "Fire base",
-      Image: "/Images/Technology/Firebase.png",
+      Image: "/images/Technology/Firebase.png",
       width: 40,
       height: 40,
     },
     {
       skill_name: "My SQL",
-      Image: "/Images/Technology/mysql.png",
+      Image: "/images/Technology/mysql.png",
       width: 50,
       height: 50,
     },
@@ -102,13 +102,13 @@
   export const Other_skill = [
     {
         skill_name: "Figma",
-        Image: "/Images/Technology/figma.png",
+        Image: "/images/Technology/figma.png",
         width: 30,
         height: 30,
       },
       {
         skill_name: "GitHub",
-        Image: "/Images/Technology/github.png",
+        Image: "/images/Technology/github.png",
         width: 60,
         height: 60,
       },
@@ -117,7 +117,7 @@
   export const Other_skill_1 = [
     {
         skill_name: "Trello",
-        Image: "/Images/Technology/trello.jpeg",
+        Image: "/images/Technology/trello.jpeg",
         width: 35,
         height: 35,
       },
