@@ -94,7 +94,7 @@ const About = () => {
       </div>
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+          <div className="flex flex-row justify-around flex-wrap -mt-28 gap-5 items-center">
             {Frontend_skill.map((image: SkillImage, index: number) => (
               <SkillDataProvider
                 key={index}
@@ -183,7 +183,9 @@ const About = () => {
               Others
             </TabButton>
           </div>
-          <div className="mt-8">
+
+          {/* Set a fixed height for the tab content area */}
+          <div className="mt-8" style={{ minHeight: '150px', transition: 'height 0.3s ease-in-out' }}>
             {selectedTab ? selectedTab.content : <p>No content available</p>}
           </div>
         </div>
