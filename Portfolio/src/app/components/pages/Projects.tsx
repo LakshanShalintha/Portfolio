@@ -48,7 +48,7 @@ const projectsData = [
     image: "/images/Projects/Logo.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://socs-website-front-end.vercel.app/",
   },
   {
     id: 6,
@@ -61,11 +61,20 @@ const projectsData = [
   },
   {
     id: 7,
-    title: "Travel-Web ",
+    title: "Personal Portfolio ",
     description: "Project 7 description",
     image: "/images/Projects/Logo.png",
     tag: ["All", "Web"],
-    gitUrl: "/https://github.com/LakshanShalintha/Travel-web",
+    gitUrl: "https://github.com/LakshanShalintha/Portfolio",
+    previewUrl: "lakshan-shalintha.vercel.app",
+  },
+  {
+    id: 8,
+    title: "Travel-Web ",
+    description: "Project 8 description",
+    image: "/images/Projects/Logo.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/LakshanShalintha/Travel-web",
     previewUrl: "https://travellsp.vercel.app/",
   },
 ];
@@ -111,32 +120,30 @@ const Projects = () => {
             isSelected={tag === "Mobile"}
           />
         </div>
-        <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-5">
           {filteredProjects.map((project, index) => (
             <motion.li
-            key={index}
-            variants={{
-              initial: { opacity: 0, scale: 0.8 }, 
-              animate: { opacity: 1, scale: 1 }   
-            }}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ 
-              duration: 0.7, 
-              delay: index * 0.3,  
-              ease: "easeOut"
-            }}
-          >
-            <ProjectCards
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
-          </motion.li>
-          
+              key={index}
+              variants={{
+                initial: { opacity: 0, scale: 0.8 },
+                animate: { opacity: 1, scale: 1 },
+              }}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.3,
+                ease: "easeOut",
+              }}
+            >
+              <ProjectCards
+                title={project.title}
+                description={project.description}
+                imgUrl={project.image}
+                gitUrl={project.gitUrl}
+                previewUrl={project.previewUrl}
+              />
+            </motion.li>
           ))}
         </ul>
       </div>
