@@ -1,49 +1,62 @@
 import React from "react";
-import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 
 interface ProjectCardProps {
-  imgUrl: string;
   title: string;
   description: string;
+  imgUrl: string;
+  tags: string[];
   gitUrl: string;
-  previewUrl: string;
+  demoUrl?: string; // Optional demoUrl prop
 }
 
 const ProjectCards: React.FC<ProjectCardProps> = ({
-  imgUrl,
   title,
   description,
+  imgUrl,
+  tags,
   gitUrl,
-  previewUrl,
+  demoUrl, // Access demoUrl prop
 }) => {
   return (
-    <div className="w-80 h-full border-20 border-transparent rounded-[24px] bg-gradient-to-r from-[#a481b6] via-[#8a30b8] to-[rgb(107,3,252)] p-[2px] hover:border-purple-500 hover:shadow-[0_0_15px_5px_rgba(128,0,128,0.5)] transition-all">
-      <div className="bg-[#1a1a1a] h-full p-4 rounded-[24px] flex flex-col">
-        <div className="h-36 w-full relative group overflow-hidden rounded-t-xl">
-          <img
-            src={imgUrl}
-            alt={title}
-            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-          />
-          <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
-            <Link
-              href={gitUrl}
-              className="h-10 w-10 mr-2 border-2 border-[#ADB7BE] rounded-full hover:border-white flex items-center justify-center group/link"
+    <div className="w-70 h-[260px] bg-purple-700 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+      {/* Image */}
+      <img src={imgUrl} alt={title} className="w-full h-20 object-fill" />
+      <div className="p-4 text-white">
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-2">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              className="bg-gray-600 text-[10px] px-2 py-1 rounded-[6px]"
             >
-              <CodeBracketIcon className="h-8 w-8 text-[#ADB7BE] group-hover/link:text-white" />
-            </Link>
-            <Link
-              href={previewUrl}
-              className="h-10 w-10 border-2 border-[#ADB7BE] rounded-full hover:border-white flex items-center justify-center group/link"
-            >
-              <EyeIcon className="h-8 w-8 text-[#ADB7BE] group-hover/link:text-white" />
-            </Link>
-          </div>
+              {tag}
+            </span>
+          ))}
         </div>
-        <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-4 px-4 flex-1">
-          <h5 className="text-xl font-semibold mb-2">{title}</h5>
-          <p className="text-[#ADB7BE]">{description}</p>
+        {/* Title */}
+        <h3 className="text-[18px] font-bold mb-2 ">{title}</h3>
+        {/* Description */}
+        <p className="text-[10px] mb-4 line-clamp-3">{description}</p>
+        {/* Buttons */}
+        <div className="flex gap-2 justify-s">
+          <a
+            href={gitUrl}
+            className="bg-purple-500 text-xs px-3 py-1 rounded-[8px] hover:bg-purple-600 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Project
+          </a>
+          {demoUrl && (
+            <a
+              href={demoUrl}
+              className="bg-purple-500 text-xs px-3 py-1 rounded-[8px] hover:bg-purple-600 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Demo
+            </a>
+          )}
         </div>
       </div>
     </div>
