@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
         <h1 className="text-4xl font-bold text-white mt-12">Contact Me</h1>
       </div>
 
-      <div className="bg-gradient-to-r from-[rgb(107,3,252)] via-[#8a30b8] to-[#a481b6] p-[6px] rounded-md mt-4">
+      <div className="bg-gradient-to-r from-[rgb(107,3,252)] via-[#8a30b8] to-[#a481b6] p-[6px] rounded-md mt-4 mr-8 ml-8">
         <div className="flex flex-col md:flex-row justify-between items-start bg-black text-white p-8 rounded-md">
           <div className="flex-1 mb-8 md:mb-0 md:pr-8">
             <h2 className="text-2xl font-semibold mb-4">Let&rsquo;s Connect</h2>
