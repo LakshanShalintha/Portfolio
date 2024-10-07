@@ -73,7 +73,7 @@ function MySection() {
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="col-span-12 lg:col-span-5 place-self-center mt-4 lg:mt-0"
         >
-          <div className="bg-[#161515] w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] relative mt-20 shadow-[0_0_25px_1px_rgba(255,255,255,0.5)]">
+          <div className="w-[400px] h-[400px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] relative mt-20 ">
             <Image
               src="/images/Myimages/my-image.png"
               alt="my image"

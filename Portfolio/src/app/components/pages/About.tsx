@@ -75,7 +75,7 @@ const About = () => {
   return (
     <div id="about" className="py-10 mt-24">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mt-12">About Me</h1>
+        <h1 className="text-4xl font-bold text-white mt-12 mb-24">About Me</h1>
       </div>
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         {/* Left side: Image */}
@@ -137,90 +137,85 @@ const About = () => {
         </div>
       </div>
 
-      {/* Row of small images with animation */}
-            {/* Row of small images with animation */}
-            <div className="flex justify-center -mt-10 overflow-x-auto">
+      <div className="flex justify-center -mt-4 overflow-x-auto">
         <div className="flex items-center space-x-4 min-w-max">
-          {/* Replace image paths with your actual image URLs */}
           <img
             src="/images/Technology/html.jpeg"
             alt="HTML"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/js.png"
             alt="JavaScript"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/tailwind.png"
             alt="Tailwind CSS"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/java.png"
             alt="Java"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
-          {/* Repeat images to create an infinite loop */}
           <img
             src="/images/Technology/react.png"
             alt="React"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/ts.png"
             alt="TypeScript"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/laravel.png"
             alt="Laravel"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/c.png"
             alt="C"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/dart.png"
             alt="Dart"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/next.png"
             alt="Next.js"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/node-js.png"
             alt="Node.js"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/Firebase.png"
             alt="Firebase"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/mysql.png"
             alt="MySQL"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/github.png"
             alt="GitHub"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
           <img
             src="/images/Technology/trello.jpeg"
             alt="Trello"
-            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2"
+            className="w-16 h-16 object-fill border-2 border-gray-500 rounded-lg p-2 animation-float"
           />
         </div>
       </div>
-
     </div>
   );
 };
