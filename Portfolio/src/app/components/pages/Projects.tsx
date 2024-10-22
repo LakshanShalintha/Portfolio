@@ -37,6 +37,16 @@ function Projects() {
     {
       id: 4,
       image: 'https://via.placeholder.com/300x200?text=Project+4',
+      title: 'AgriZone',
+      description: 'Our app connects farmers and consumers directly, eliminating middlemen to ensure fair prices and increased profits for farmers while enhancing market access and sustainability.',
+      gitUrl: '',
+      demoUrl: 'https://demo.com/demo4',
+      smallGridTexts: ['Laravel', 'Bootstrap', 'MySql'],
+      category: 'Mobile', 
+    },
+    {
+      id: 5,
+      image: 'https://via.placeholder.com/300x200?text=Project+5',
       title: 'Psychological Counselling',
       description: 'Sith Arana: A web app streamlining counseling services at SUSL, supporting students, counselors, and admins with efficient and user-friendly management.',
       gitUrl: 'https://github.com/LakshanShalintha/SUSL-Faculty-Of-Social-Sciences-Sith-Arana-Psychological-Counseling-System--2024',
@@ -45,7 +55,7 @@ function Projects() {
       category: 'Web', 
     },
     {
-      id: 5,
+      id: 6,
       image: 'https://via.placeholder.com/300x200?text=Project+5',
       title: 'Rajarata Pawning Centre',
       description: 'Developed a travel website frontend, allowing users to book places, view attractions, explore a gallery, and access our services.',
@@ -55,7 +65,7 @@ function Projects() {
       category: 'Web', 
     },
     {
-      id: 6,
+      id: 7,
       image: 'https://via.placeholder.com/300x200?text=Project+6',
       title: 'Personal Portfolio',
       description: "This is my personal website that I frequently update with innovative new technologies that I learn during my journey.",
@@ -65,7 +75,7 @@ function Projects() {
       category: 'Web', 
     },
     {
-      id: 7,
+      id: 8,
       image: 'https://via.placeholder.com/300x200?text=Project+6',
       title: 'Travel-Web',
       description: "Developed a travel website frontend, allowing users to book places, view attractions, explore a gallery, and access our services.",
