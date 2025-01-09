@@ -49,14 +49,16 @@ function NavBar({
           }`}
       >
         {/* Logo */}
-        <div className="text-2xl font-bold">
-          NLS<span className="text-red-500"> .</span>
-        </div>
+          <div className="text-2xl font-bold">
+              <Link href="#home">
+                  NLS<span className="text-red-500"> .</span>
+              </Link>
+          </div>
 
-        {/* Desktop Navigation Links */}
-        <div
-            className={`hidden md:flex items-center ${
-                isDarkMode ? "bg-gray-700" : "bg-gray-100"
+          {/* Desktop Navigation Links */}
+          <div
+              className={`hidden md:flex items-center ${
+                  isDarkMode ? "bg-gray-700" : "bg-gray-100"
             } px-6 py-2 rounded-full shadow-sm`}
         >
           <ul className="flex space-x-8">
