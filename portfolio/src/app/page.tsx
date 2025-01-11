@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import Footer from "./components/Common/Footer";
 import NavBar from "./components/Common/NavBar";
-
+import About from "./components/Screens/about/page";
+import Contact from "./components/Screens/contact/page";
 import MySection from "./components/Screens/mysection/page";
-
+import Projects from "./components/Screens/projets/page";
+import MyServices from "./components/Screens/services/page";
 
 export default function Home() {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -36,7 +38,10 @@ export default function Home() {
         <>
             <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             <section id="/" ><MySection isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/></section>
-
+            <section id="about" ><About /></section>
+            <section id="services" ><MyServices/></section>
+            <section id="project" ><Projects/></section>
+            <section id="contact" ><Contact/></section>
             <Footer/>
         </>
     );
