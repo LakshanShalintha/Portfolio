@@ -37,7 +37,7 @@ export default function Home() {
     return (
         <>
             <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-            <section id="/" ><MySection isDarkMode={isDarkMode} /></section>
+            <section id="/" ><MySection /></section>
             <section id="about" ><About /></section>
             <section id="services" ><MyServices/></section>
             <section id="project" ><Projects/></section>
