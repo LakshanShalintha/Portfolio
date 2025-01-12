@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useRef } from "react";
 import Link from "next/link";
 import { motion, useInView } from "motion/react";
@@ -8,7 +9,7 @@ function MySection({ isDarkMode }: { isDarkMode: boolean }) {
     const isInView = useInView(ref, { once: false });
 
     return (
-        <section id="home" className="flex flex-col items-center text-center py-16 ">
+        <section id="home" className="flex flex-col items-center text-center py-16">
             <motion.div
                 className="mt-16"
                 initial={{ scale: 0 }}
@@ -81,4 +82,7 @@ function MySection({ isDarkMode }: { isDarkMode: boolean }) {
     );
 }
 
-export default MySection;
+// Ensure the correct default export is a page
+export default function Page() {
+    return <MySection isDarkMode={false} />;
+}
