@@ -47,7 +47,7 @@ function MyServices() {
                           whileInView={{opacity: 1 }}
                           transition={{ delay: 0.7, duration: 0.5 }}
                 >
-                    I am a frontend developer with 10 years of experience in multiple companies like Microsoft, Tesla, and Apple.
+                    I specialize in crafting modern, responsive websites, developing cross-platform mobile applications, <br/> and designing user-centric interfaces that blend aesthetics with functionality to deliver seamless digital experiences.
                 </motion.p>
 
                 <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
