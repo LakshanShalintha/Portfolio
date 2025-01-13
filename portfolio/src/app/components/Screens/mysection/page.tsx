@@ -30,7 +30,7 @@ function MySection({ isDarkMode }: { isDarkMode: boolean }) {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >
-                Hi! I&rsquo;m Laksha Shalintha
+                Hi! I&rsquo;m Lakshan Shalintha
             </motion.h2>
 
             <motion.h1
@@ -49,7 +49,7 @@ function MySection({ isDarkMode }: { isDarkMode: boolean }) {
                 className="max-w-2xl mx-auto mb-8"
             >
                 I&rsquo;m a Software Engineer with expertise in mobile and web development, passionate about building
-                user-friendly and efficient digital solutions. Welcome to my portfolio, where innovation meets
+                user friendly and efficient digital solutions. Welcome to my portfolio, where innovation meets
                 technology.
             </motion.p>
 
