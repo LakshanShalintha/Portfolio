@@ -6,8 +6,8 @@ import Contact from "./components/sections/Contact";
 import MySection from "./components/sections/HeroSection";
 import Projects from "./components/sections/Projects";
 import MyServices from "./components/sections/Services";
-import NavBar from "./components/common/NavBar";
-import Footer from "./components/common/Footer";
+import NavBar from "./components/sections/NavBar";
+import Footer from "./components/sections/Footer";
 
 export default function Home() {
     const [isDarkMode, setIsDarkMode] = useState(false);
