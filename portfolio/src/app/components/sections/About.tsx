@@ -38,10 +38,10 @@ function About() {
                       transition={{ duration: 0.6 }}
           >
             <Image
-                src="/images/Myimages/my-image.png"
+                src="/images/Myimages/1.JPEG"
                 alt="User"
                 width={320}
-                height={400}
+                height={350}
                 className="w-full rounded-3xl"
             />
           </motion.div>

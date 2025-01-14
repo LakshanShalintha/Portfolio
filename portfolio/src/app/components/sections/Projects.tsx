@@ -123,7 +123,7 @@ function Projects() {
                whileHover={{ scale: 1.05 }}
                transition={{ duration: 0.3 }}>
             <img
-              src="/images/project8.jpg"
+              src="/images/Projects/Qpid.png"
               alt="Project 8"
               className="w-full h-64 object-cover rounded-xl"
             />

@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Footer from "./components/Common/Footer";
-import NavBar from "./components/Common/NavBar";
-import About from "./components/Screens/about/page";
-import Contact from "./components/Screens/contact/page";
-import MySection from "./components/Screens/mysection/page";
-import Projects from "./components/Screens/projets/page";
-import MyServices from "./components/Screens/services/page";
+import Footer from "./components/common/Footer";
+import NavBar from "./components/common/NavBar";
+import About from "./components/sections/About";
+import Contact from "./components/sections/Contact";
+import MySection from "./components/sections/HeroSection";
+import Projects from "./components/sections/Projects";
+import MyServices from "./components/sections/Services";
 
 export default function Home() {
     const [isDarkMode, setIsDarkMode] = useState(false);
