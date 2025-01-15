@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import About from "./components/sections/About";
 import Contact from "./components/sections/Contact";
 import MySection from "./components/sections/HeroSection";
-import Projects from "./components/sections/Projects";
 import MyServices from "./components/sections/Services";
 import NavBar from "./components/sections/NavBar";
 import Footer from "./components/sections/Footer";
+import Project from "@/app/components/sections/Projects/Project";
 
 export default function Home() {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -40,7 +40,7 @@ export default function Home() {
             <section id="/" ><MySection /></section>
             <section id="about" ><About /></section>
             <section id="services" ><MyServices/></section>
-            <section id="project" ><Projects/></section>
+            <section id="project" ><Project /></section>
             <section id="contact" ><Contact/></section>
             <Footer/>
         </>
