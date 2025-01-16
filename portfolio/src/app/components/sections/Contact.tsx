@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail, MdPhone } from "react-icons/md";
 import { motion, useInView } from "framer-motion";
 
 const Contact: React.FC = () => {
@@ -51,62 +52,77 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <motion.section ref={ref} id="contact" className="py-16 px-[12%] scroll-mt-20"
+    <motion.section ref={ref} id="contact" className="py-16 px-[12%] scroll-mt-20 z-10"
                     initial={{ opacity: 0, y: -20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6 }}
     >
-      <div className="container mx-auto">
-        <motion.h2 className="text-center text-5xl font-Ovo font-bold  mb-12"
-            initial={{ y: -20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}        >Contact Me</motion.h2>
+      <div className="container mx-auto z-10">
+        <motion.h2 className="text-center text-5xl font-Ovo font-bold  mb-12 z-10"
+                   whileInView={{ opacity: 1, y: 0 }}
+                   initial={{ opacity: 0, y: -100 }}
+                   transition={{ duration: 0.5 }}
+        >
+          Contact Me
+        </motion.h2>
       </div>
 
       <div className="p-[6px] rounded-md mt-4 mr-8 ml-8">
         <div className="flex flex-col md:flex-row justify-between items-start  p-8 rounded-md">
-          <motion.div className=" flex-1 mb-8 md:mb-0 md:pr-8"
-                      initial={{opacity: 0 }}
+          <motion.div className=" flex-1 mb-8 md:mb-0 md:pr-8 z-10"
+                      initial={{opacity: 0}}
                       whileInView={{opacity: 1 }}
                       transition={{ delay: 0.7, duration: 0.5 }}
           >
-            <h2 className=" text-2xl font-semibold mb-4">Let&rsquo;s Connect</h2>
+            <h2 className=" text-2xl font-semibold mb-4 z-10">Let&rsquo;s Connect</h2>
             <p className=" mb-6">
               I&rsquo;m currently looking for new opportunities, my inbox is always
               open. Whether you have a question or just want to say hi, I&apos;ll try
               my best to get back to you!
             </p>
 
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 z-10">
               <a
-                href="https://github.com/LakshanShalintha"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" hover:text-gray-400"
+                  href="https://github.com/LakshanShalintha"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-400"
               >
-                <FaGithub size={30} />
+                <FaGithub size={30}/>
               </a>
               <a
-                href="https://www.linkedin.com/in/lakshan-shalintha-707bba300/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" hover:text-gray-400"
+                  href="https://www.linkedin.com/in/lakshan-shalintha-707bba300/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-400"
               >
-                <FaLinkedin size={30} />
+                <FaLinkedin size={30}/>
+              </a>
+              <a
+                  href="mailto:lakshanshalintha2001@gmail.com"
+                  className="hover:text-gray-400"
+              >
+                <MdEmail size={30}/>
+              </a>
+              <a
+                  href="tel:+94715523116"
+                  className="hover:text-gray-400"
+              >
+                <MdPhone size={30}/>
               </a>
             </div>
           </motion.div>
 
-          <motion.div className="flex-1 w-full md:w-auto"
-                      initial={{opacity: 0 }}
-                      whileInView={{opacity: 1 }}
-                      transition={{ delay: 0.7, duration: 0.5 }}
+          <motion.div className="flex-1 w-full md:w-auto z-10"
+                      initial={{opacity: 0}}
+                      whileInView={{opacity: 1}}
+                      transition={{delay: 0.7, duration: 0.5}}
           >
             <form onSubmit={handleSubmit} ref={formRef} className="flex flex-col space-y-4">
               <motion.div className="flex flex-col"
-                          initial={{ x: -50, opacity: 0 }}
-                          whileInView={{ x: 0, opacity: 1 }}
-                          transition={{ delay: 1.1, duration: 0.6 }}
+                          initial={{x: -50, opacity: 0}}
+                          whileInView={{x: 0, opacity: 1}}
+                          transition={{delay: 1.1, duration: 0.6}}
               >
                 <label htmlFor="email" className=" mb-1">
                   Your email

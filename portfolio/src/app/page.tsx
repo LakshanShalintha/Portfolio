@@ -37,12 +37,29 @@ export default function Home() {
     return (
         <>
             <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-            <section id="/" ><MySection /></section>
-            <section id="about" ><About /></section>
-            <section id="services" ><MyServices/></section>
-            <section id="project" ><Projects /></section>
-            <section id="contact" ><Contact/></section>
-            <Footer/>
+            <div className={`relative h-full w-full ${isDarkMode ? "bg-black" : ""}`}>
+                {isDarkMode && (
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+                    </div>
+                )}
+                <section id="/" >
+                    <MySection isDarkMode={false} />
+                </section>
+                <section id="about" >
+                    <About />
+                </section>
+                <section id="services" >
+                    <MyServices />
+                </section>
+                <section id="project" >
+                    <Projects />
+                </section>
+                <section id="contact" >
+                    <Contact />
+                </section>
+                <Footer />
+            </div>
         </>
     );
 }
+
