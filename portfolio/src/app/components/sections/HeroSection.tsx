@@ -1,15 +1,23 @@
-"use client";
-
 import React, { useRef } from "react";
 import Link from "next/link";
-import { motion, useInView } from "motion/react";
+import { motion, useInView } from "framer-motion";
 
 function MySection({ isDarkMode }: { isDarkMode: boolean }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: false });
 
     return (
-        <section id="home" className="flex flex-col items-center text-center py-16">
+        <section
+            id="home"
+            className="relative flex flex-col items-center text-center py-16 overflow-hidden"
+        >
+            {/* Background */}
+            {isDarkMode && ( // Show the black circle only in dark mode
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute left-1/2 top-[-20%] h-[800px] w-[800px] rounded-full bg-[radial-gradient(circle,#000000,#111111)] transform -translate-x-1/2" />
+                </div>
+            )}
+
             <motion.div
                 className="mt-16"
                 initial={{ scale: 0 }}
@@ -49,7 +57,7 @@ function MySection({ isDarkMode }: { isDarkMode: boolean }) {
                 className="max-w-2xl mx-auto mb-8"
             >
                 I&rsquo;m a Software Engineer with expertise in mobile and web development, passionate about building
-                user friendly and efficient digital solutions. Welcome to my portfolio, where innovation meets
+                user-friendly and efficient digital solutions. Welcome to my portfolio, where innovation meets
                 technology.
             </motion.p>
 
@@ -82,7 +90,4 @@ function MySection({ isDarkMode }: { isDarkMode: boolean }) {
     );
 }
 
-// Ensure the correct default export is a page
-export default function Page() {
-    return <MySection isDarkMode={false} />;
-}
+export default MySection;
