@@ -244,7 +244,7 @@ function Projects() {
                             }`}
                             disabled={project.isDisabled}
                         >
-                          View Project
+                          Project
                         </button>
                       </a>
                       {project.hasDemo && (
