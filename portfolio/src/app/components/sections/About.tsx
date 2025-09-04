@@ -38,7 +38,7 @@ function About() {
                       transition={{ duration: 0.6 }}
           >
             <Image
-                src="/images/Myimages/1.JPEG"
+                src="/images/Myimages/About_img.jpeg"
                 alt="User"
                 width={320}
                 height={350}

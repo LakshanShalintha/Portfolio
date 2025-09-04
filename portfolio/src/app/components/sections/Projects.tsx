@@ -123,6 +123,28 @@ function Projects() {
       smallGridTexts: ['Html', 'CSS', 'JavaScript'],
       category: 'Web',
     },
+    {
+      id: 11,
+      image: '/images/Projects/Fit at Home.jpeg',
+      title: 'Fit at Home',
+      description: "",
+      gitUrl: '',
+      hasDemo: false,
+      demoUrl: 'https://travellsp.vercel.app/',
+      smallGridTexts: ['Fluter', 'Firebase'],
+      category: 'Mobile',
+    },
+    {
+      id: 12,
+      image: '/images/Projects/Ayurveda Web.JPG',
+      title: 'CeylonMystique',
+      description: "",
+      gitUrl: '',
+      hasDemo: true,
+      demoUrl: 'https://www.ceylonmystique.com/',
+      smallGridTexts: ['React Js', 'Firebase'],
+      category: 'Web',
+    },
   ];
 
   // State for selected category
